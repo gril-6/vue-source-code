@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../shared/src/index.ts", "../src/index.ts"],
+  "sourcesContent": ["/*\n * @Author: hanjing\n * @Date: 2022-08-30 09:53:41\n * @LastEditTime: 2022-08-30 09:54:14\n */\nexport const Objects = () => {\n  console.log(111)\n}\n", "/*\n * @Author: hanjing\n * @Date: 2022-08-29 18:17:32\n * @LastEditTime: 2022-08-30 10:04:29\n */\nimport { Objects } from '@vue/shared'\nconsole.log(Objects(), '1')\n"],
+  "mappings": ";;AAKO,MAAM,UAAU,MAAM;AAC3B,YAAQ,IAAI,GAAG;AAAA,EACjB;;;ACDA,UAAQ,IAAI,QAAQ,GAAG,GAAG;",
+  "names": []
+}

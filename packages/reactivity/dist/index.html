@@ -1,0 +1,45 @@
+<!--
+ * @Author: hanjing
+ * @Date: 2022-08-30 10:02:36
+ * @LastEditTime: 2022-08-30 10:57:16
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+    <div id="app"></div>
+    <script>
+        // effect 代表的是副作用函数，如果函数依赖的数据发生变化，重新执行
+        // reactive 将数据变成响应式 proxy
+        // ref使用defineproperty
+
+        const {
+            effect,
+            reactive // 支持数组 对象 Set Map 
+        } = VueReactivity
+
+
+        const state = reactive({
+            name: 'a',
+            age: 2
+        })
+        console.log(state);
+
+        effect(() => { //此effect函数默认会执行一次 对响应式数据取值(取值过程中数据会依赖当前的effect)
+            app.innerHTML = state.name + 's' + state.age
+        })
+        setTimeout(() => {
+            state.age = 14
+        }, 1000)
+    </script>
+</body>
+
+</html>
