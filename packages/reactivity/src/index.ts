@@ -1,7 +1,8 @@
 /*
  * @Author: hanjing
  * @Date: 2022-08-29 18:17:32
- * @LastEditTime: 2022-08-30 10:04:29
+ * @LastEditTime: 2022-08-30 22:21:16
  */
-import { Objects } from '@vue/shared'
-console.log(Objects(), '1')
+
+export { effect } from './effect'
+export { reactive } from './reactive'

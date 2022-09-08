@@ -1,7 +1,7 @@
 <!--
  * @Author: hanjing
  * @Date: 2022-08-30 10:02:36
- * @LastEditTime: 2022-08-30 10:57:16
+ * @LastEditTime: 2022-08-30 22:36:48
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <script src="../../../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+    <!-- <script src="../../../node_modules/@vue/reactivity/dist/reactivity.global.js"></script> -->
+    <script src="./reactivity.global.js"></script>
     <div id="app"></div>
     <script>
         // effect 代表的是副作用函数，如果函数依赖的数据发生变化，重新执行
@@ -24,7 +25,7 @@
         const {
             effect,
             reactive // 支持数组 对象 Set Map 
-        } = VueReactivity
+        } = VueRectivity
 
 
         const state = reactive({
@@ -34,10 +35,10 @@
         console.log(state);
 
         effect(() => { //此effect函数默认会执行一次 对响应式数据取值(取值过程中数据会依赖当前的effect)
-            app.innerHTML = state.name + 's' + state.age
+            document.body.innerHTML = state.name + 's' + state.age
         })
         setTimeout(() => {
-            state.age = 14
+            state.age = 0
         }, 1000)
     </script>
 </body>
