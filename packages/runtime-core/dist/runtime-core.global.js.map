@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts", "../src/renderer.ts", "../src/h.ts"],
+  "sourcesContent": ["/*\n * @Author: hanjing\n * @Date: 2022-09-08 18:21:55\n * @LastEditTime: 2022-09-08 18:28:51\n */\nexport { creatRenderer } from './renderer'\nexport { h } from './h'\n", "/*\n * @Author: hanjing\n * @Date: 2022-09-08 18:21:48\n * @LastEditTime: 2022-09-08 18:22:43\n */\nexport function creatRenderer(renderOptions) {\n  const render = (vnode, container) => {}\n  return { render }\n}\n", "/*\n * @Author: hanjing\n * @Date: 2022-09-08 18:28:19\n * @LastEditTime: 2022-09-08 18:28:29\n */\nexport function h() {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;ACKO,WAAS,cAAc,eAAe;AAC3C,UAAM,SAAS,CAAC,OAAO,cAAc;AAAA,IAAC;AACtC,WAAO,EAAE,OAAO;AAAA,EAClB;;;ACHO,WAAS,IAAI;AAAA,EAAC;",
+  "names": []
+}
